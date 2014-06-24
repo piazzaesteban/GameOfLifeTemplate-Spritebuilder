@@ -168,6 +168,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             }
         }
     }
+    _totalAlive = numAlive;
 }
 
 @end
