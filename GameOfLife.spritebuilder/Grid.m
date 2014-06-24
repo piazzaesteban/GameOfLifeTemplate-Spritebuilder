@@ -152,7 +152,7 @@ for (int i = 0; i < [_gridArray count]; i++)
 -(void)updateCreatures
 {
     for(int i=0; i < _gridArray.count; i++){
-        for(int j=0; j< _gridArray[i].count; j++)
+        for(int j=0; j< [_gridArray[i] count]; j++)
         {
             Creature *currentCreature = _gridArray[i][j];
             if(currentCreature.livingNeighbors ==3){
