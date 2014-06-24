@@ -156,13 +156,16 @@ for (int i = 0; i < [_gridArray count]; i++)
         for(int j=0; j< [_gridArray[i] count]; j++)
         {
             Creature *currentCreature = _gridArray[i][j];
+            if(currentCreature.isAlive){
+                numAlive++;
+            }
             if(currentCreature.livingNeighbors ==3){
                 currentCreature.isAlive = YES;
-                numAlive++;
+               
             }
             else {
                 if(currentCreature.livingNeighbors<=1||currentCreature.livingNeighbors>=4){
-                    currentCreature.isAlive = NO;                    
+                    currentCreature.isAlive = NO;
                 }
             }
         }
